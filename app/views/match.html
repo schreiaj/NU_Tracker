@@ -1,0 +1,9 @@
+<div><h3>Match: {{match.match}}</h3></div>
+<div><h3>Team: {{match.team}}</h3></div>
+<div class="row" ng-repeat="action in actions">
+<button id="{{action.name}}" type="button" class="btn btn-default btn-large" ng-click="toggle()">{{action.name}}</button>
+  <span ng-repeat="time in action.values |orderBy:'toString()'" ng-model="time">
+    <!-- <span class="glyphicon glyphicon-remove" ng-click="deleteTime()" id="{{action.name}}-{{$index}}"></span> -->
+    {{time}}
+  </span>
+</div>
